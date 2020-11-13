@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <title>BS {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <!-- NavBar Section -->
+    {% include 'partials/_navbar.html' %}
+
+
+    <!-- Content -->
+    {% block content %}{% endblock %}
+
+
+    <!-- Footer section -->
+    {% include 'partials/_footer.html' %}
+
+    <!-- JavaScript Section -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static ' js/bootstrap.bundle.min.js' %} "></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+
+</body>
+</html>
